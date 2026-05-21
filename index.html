@@ -130,19 +130,81 @@
         <div class="container">
           <h2 class="section-title">Contact rapide</h2>
           <div class="contact-box">
-            <div class="contact-grid">
-              <div class="contact-item">
-                <strong>Téléphone</strong>
-                <p>01 80 90 99 90</p>
+            <div class="contact-layout">
+              <div class="contact-info">
+                <p class="contact-lead">
+                  Décrivez votre besoin en plomberie et recevez un rappel rapide de notre équipe.
+                </p>
+                <div class="contact-info-grid">
+                  <div class="contact-item">
+                    <strong>Téléphone</strong>
+                    <p>01 80 90 99 90</p>
+                  </div>
+                  <div class="contact-item">
+                    <strong>Email</strong>
+                    <p>contact@supermario-plomberie.fr</p>
+                  </div>
+                  <div class="contact-item">
+                    <strong>Adresse</strong>
+                    <p>32 rue du Faubourg Saint-Martin, 75010 Paris</p>
+                  </div>
+                </div>
               </div>
-              <div class="contact-item">
-                <strong>Email</strong>
-                <p>contact@supermario-plomberie.fr</p>
-              </div>
-              <div class="contact-item">
-                <strong>Adresse</strong>
-                <p>32 rue du Faubourg Saint-Martin, 75010 Paris</p>
-              </div>
+              <form class="contact-form" action="#contact" method="post">
+                <div class="contact-field">
+                  <label for="contact-name">Nom complet</label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder="Ex: Camille Dupont"
+                    required
+                  />
+                </div>
+                <div class="contact-field">
+                  <label for="contact-phone">Téléphone</label>
+                  <input
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="06 12 34 56 78"
+                    required
+                  />
+                </div>
+                <div class="contact-field">
+                  <label for="contact-email">Email</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="vous@email.fr"
+                    required
+                  />
+                </div>
+                <div class="contact-field">
+                  <label for="contact-service">Type de demande</label>
+                  <select id="contact-service" name="service" required>
+                    <option value="">Choisir une option</option>
+                    <option value="urgence">Urgence 24/7</option>
+                    <option value="reparation">Réparation / entretien</option>
+                    <option value="renovation">Rénovation sanitaire</option>
+                  </select>
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    placeholder="Décrivez le problème, l'adresse d'intervention et vos disponibilités."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary contact-submit">Envoyer la demande</button>
+              </form>
             </div>
           </div>
         </div>

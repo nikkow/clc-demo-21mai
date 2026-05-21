@@ -340,12 +340,28 @@ section {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0));
 }
 
-.contact-grid {
+.contact-layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.contact-info {
+  display: grid;
   gap: 14px;
+}
+
+.contact-lead {
+  font-weight: 600;
+  max-width: 40ch;
+}
+
+.contact-info-grid {
+  display: grid;
+  gap: 12px;
 }
 
 .contact-item {
@@ -358,6 +374,63 @@ section {
 .contact-item strong {
   display: block;
   margin-bottom: 4px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-field {
+  display: grid;
+  gap: 6px;
+}
+
+.contact-field label {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.13);
+  color: var(--white);
+  padding: 11px 12px;
+  font: inherit;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-field select option {
+  color: var(--ink);
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  outline: 2px solid rgba(244, 180, 0, 0.75);
+  outline-offset: 1px;
+}
+
+.contact-field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-submit {
+  border: none;
+  cursor: pointer;
 }
 
 footer {
@@ -392,7 +465,8 @@ footer {
 @media (max-width: 980px) {
   .hero-grid,
   .cards,
-  .contact-grid {
+  .contact-layout,
+  .contact-form {
     grid-template-columns: 1fr;
   }
 
